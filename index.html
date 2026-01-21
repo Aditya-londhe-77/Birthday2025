@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <div class="container" id="welcome-screen">
+        <h1 class="title">Someone special has a birthday...</h1>
+        <p class="subtitle">I have a surprise for you.<br>Tap the box!</p>
+        
+        <div class="gift-box-container" id="click-trigger">
+            <div class="gift-box">
+                <div class="lid"></div>
+                <div class="box"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container hidden" id="celebration-screen">
+        <h1 class="animate-pop">Happy Birthday, <span id="name">Love!</span> ❤️</h1>
+        
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Memory 1">
+            <img src="https://images.unsplash.com/photo-1531747056595-07f6cbbe10fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Memory 2">
+            <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Memory 3">
+        </div>
+
+        <div class="message-card">
+            <p id="typing-text"></p>
+        </div>
+
+        <button onclick="toggleMusic()" class="music-btn" id="musicBtn">⏸️ Pause Music</button>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
